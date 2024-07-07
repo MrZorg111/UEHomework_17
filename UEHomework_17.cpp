@@ -6,8 +6,9 @@ class Vector {
  
 public:
     Vector() {
-        pointA[2] = {0};
-     }
+        pointA[0] = {0};
+        pointA[1] = {0};
+    }
     Vector(const int _x, const int _y) {
         pointA[0] = _x;
         pointA[1] = _y;
