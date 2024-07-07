@@ -2,44 +2,41 @@
 #include <cmath>
 
 class Vector {
-    int x;
-    int y;
-    
+    int pointA[2];
+ 
 public:
     Vector() {
-        x = 0;
-        y = 0;
-        
-    }
-    Vector(int _x, int _y) {
-        x = _x;
-        y = _y;
+        pointA[2] = {0};
+     }
+    Vector(const int _x, const int _y) {
+        pointA[0] = _x;
+        pointA[1] = _y;
     }
 
     void setX(int _x) {
-        x = _x;
+        pointA[0] = _x;
     }
     void setY(int _y) {
-        y = _y;
+        pointA[1] = _y;
     }
     int getX() {
-        return x;
+        return pointA[0];
     }
     int getY() {
-        return y;
+        return pointA[1];
     }
     
     void getVectorlength() {
-        std::cout << "Vector length: " << hypot(x, y);
+        std::cout << "Vector length: " << hypot(pointA[0], pointA[1]);
     }
 };
 
 int main(){
     setlocale(LC_ALL, "rus");
-    int hight, weight;
+    int x, y;
     std::cout << "Enter the coordinates of the vector: " << std::endl;
-    std::cin >> hight >> weight;
-    Vector vec(hight, weight);
+    std::cin >> x >> y;
+    Vector vec(x, y);
     vec.getVectorlength();
     
 }
