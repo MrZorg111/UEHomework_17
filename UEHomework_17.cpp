@@ -27,8 +27,8 @@ public:
         return pointA[1];
     }
     
-    void getVectorlength() {
-        std::cout << "Vector length: " << hypot(pointA[0], pointA[1]);
+    float getVectorlength() {
+        return hypot(pointA[0], pointA[1]);
     }
 };
 
@@ -38,6 +38,6 @@ int main(){
     std::cout << "Enter the coordinates of the vector: " << std::endl;
     std::cin >> x >> y;
     Vector vec(x, y);
-    vec.getVectorlength();
+    std::cout << "Vector length: " << vec.getVectorlength() << std::endl;
     
 }
